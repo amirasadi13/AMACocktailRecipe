@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_page_nav_graph"
+    app:startDestination="@id/categoryFragment">
+
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.example.amacocktailrecipes.homepage.category.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_categoryFragment_to_cocktailsListFragment"
+            app:destination="@id/cocktailsListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cocktailsListFragment"
+        android:name="com.example.amacocktailrecipes.cocktailslist.CocktailsListFragment"
+        android:label="fragment_cocktails_list"
+        tools:layout="@layout/fragment_cocktails_list" >
+        <action
+            android:id="@+id/action_cocktailsListFragment_to_cocktailInfoFragment"
+            app:destination="@id/cocktailInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cocktailInfoFragment"
+        android:name="com.example.amacocktailrecipes.cocktailinfo.CocktailInfoFragment"
+        android:label="fragment_cocktail_info"
+        tools:layout="@layout/fragment_cocktail_info" />
+</navigation>
